@@ -13,3 +13,5 @@ W konsoli powinno wyświetlić się 6 losowych liczb z zakresu od 1 do 99.
 Niech to będzie najprościej napisana aplikacja.
 
 Powinny być obsłużone sytuacje niedozwolone i użytkownik powinien dostać informacje, że np. podał ujemną liczbę lub liczbę spoza zakresu.
+
+W zależności od ilości trafionych numerów użytkownik powinien dostać informację czy wygrał czy przegrał. Warunek wygrania to trafenie minimum 3 liczb.
