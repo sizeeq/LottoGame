@@ -1,4 +1,4 @@
-package com.gmail.sizeeq.numbersgenerator;
+package com.gmail.sizeeq.numbergenerator;
 
 import com.gmail.sizeeq.config.Config;
 
@@ -10,7 +10,7 @@ public class WinningNumberGenerator {
 
     public Set<Integer> generateWinningNumbers() {
         return new Random()
-                .ints(Config.NUMBERS_FROM_USER, Config.LOWER_BOUND, Config.UPPER_BOUND)
+                .ints(Config.NUMBERS_FROM_USER, Config.LOWER_BOUND_FOR_GENERATOR, Config.UPPER_BOUND_FOR_GENERATOR)
                 .boxed()
                 .collect(Collectors.toSet());
     }
