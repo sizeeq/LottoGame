@@ -1,5 +1,5 @@
 package com.gmail.sizeeq.result;
 
-public interface GameResultMessage {
+public interface ResultMessage {
     String getGameResultMessage();
 }

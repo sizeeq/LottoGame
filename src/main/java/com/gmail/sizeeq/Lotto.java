@@ -1,6 +1,6 @@
 package com.gmail.sizeeq;
 
-import com.gmail.sizeeq.input.NumberReceiver;
+import com.gmail.sizeeq.input.NumberInputReceiver;
 import com.gmail.sizeeq.logic.HitNumberCalculator;
 import com.gmail.sizeeq.numbergenerator.WinningNumberGenerator;
 
@@ -14,9 +14,9 @@ public class Lotto {
 
     public static Game getLottoGame() {
         final Scanner scanner = new Scanner(System.in);
-        final NumberReceiver numberReceiver = new NumberReceiver();
+        final NumberInputReceiver numberInputReceiver = new NumberInputReceiver();
         final WinningNumberGenerator winningNumberGenerator = new WinningNumberGenerator();
         final HitNumberCalculator hitNumberCalculator = new HitNumberCalculator();
-        return new LottoGameFacade(scanner, numberReceiver, winningNumberGenerator, hitNumberCalculator);
+        return new LottoGameFacade(scanner, numberInputReceiver, winningNumberGenerator, hitNumberCalculator);
     }
 }

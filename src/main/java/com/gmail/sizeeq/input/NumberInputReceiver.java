@@ -3,11 +3,12 @@ package com.gmail.sizeeq.input;
 import com.gmail.sizeeq.config.Config;
 import com.gmail.sizeeq.messages.Messages;
 
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
 
-public class NumberReceiver {
+public class NumberInputReceiver {
 
     public Set<Integer> getNumbersFromUser(Scanner scanner) {
         Set<Integer> givenNumbers = getUserInput(scanner);
@@ -21,6 +22,11 @@ public class NumberReceiver {
         System.out.println(Messages.ENTER_NUMBERS);
         while (!hasUserGaveSixNumbers(givenNumbers)) {
             System.out.println(Messages.ENTER_NUMBER);
+            while (!scanner.hasNext()) {
+                if (!scanner.hasNextInt()) {
+                    return Collections.emptySet();
+                }
+            }
             final int userInput = scanner.nextInt();
             if (numberValidator.isNumberValid(userInput)) {
                 givenNumbers.add(userInput);
